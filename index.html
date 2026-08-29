@@ -424,8 +424,11 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
 @media (max-width:640px){
   .cols-3,.cols-4,.steps,.flow,.contact-grid{grid-template-columns:1fr}
   .slide{min-height:auto;padding:7vh 0}
-  .slide-inner{min-height:auto}
-  .slide-brand{position:static;margin-top:24px}
+  .slide-inner{min-height:auto;padding-bottom:clamp(50px,7vh,70px)}
+  .slide-brand{
+    position:absolute;left:var(--pad-x);bottom:clamp(12px,2vh,20px);
+    margin-top:0;
+  }
   .lockup{flex-wrap:wrap}
 }
 
@@ -477,7 +480,9 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
 @media (max-width:1080px){
   .closing-split{grid-template-columns:1fr}
   .col-body{grid-template-columns:1fr}
-  .mock{display:none}
+  .mock{width:clamp(80px,22vw,120px);margin:0 auto}
+  .qr-row{grid-template-columns:1fr;gap:clamp(10px,1.6vw,16px)}
+  .qr-card{max-width:340px;margin:0 auto;width:100%}
 }
 
 /* ===== FOTOS DE PERFIL ===== */
@@ -596,7 +601,6 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
 
       <div class="cover-foot animate delay-5">
         <span>Plataforma de benefícios</span><span class="dot"></span>
-        <span>Est. 1914 · Belém-PA</span><span class="dot"></span>
         <span>Powered by Discontapp</span>
       </div>
     </div>
@@ -680,7 +684,7 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
           <div class="icon-badge ghost"><svg class="ico"><use href="#i-shield"/></svg></div>
           <div class="step">01</div>
           <h3>Paysandu</h3>
-          <p>Base de sócios e lojistas acessa a plataforma.</p>
+          <p>Base de sócios e lojistas parceiros.</p>
         </div>
         <div class="flow-node animate delay-2">
           <div class="icon-badge ghost"><svg class="ico"><use href="#i-percent"/></svg></div>
@@ -704,7 +708,7 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
 
       <div class="flow-loop animate delay-5">
         <svg class="ico"><use href="#i-rotate"/></svg>
-        <span>O ciclo fecha: o consumo volta ao clube em dados reais e receita recorrente.</span>
+        <span>O ciclo fecha: o consumo volta ao clube em dados reais.</span>
       </div>
     </div>
 
@@ -739,7 +743,8 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
             <li><svg class="ico"><use href="#i-wallet"/></svg>Carteira de benefícios integrada</li>
             <li><svg class="ico"><use href="#i-qr"/></svg>Resgate rápido com QR Code</li>
             <li><svg class="ico"><use href="#i-bell"/></svg>Notificações de ofertas exclusivas</li>
-            <li><svg class="ico"><use href="#i-users"/></svg>Programa de afiliados ativo</li>
+            <li><svg class="ico"><use href="#i-users"/></svg>Ativar Programa de Afiliados</li>
+            <li><svg class="ico"><use href="#i-pin"/></svg>Visualiza onde utilizar seu Discontoken</li>
           </ul>
           </div>
         </div>
@@ -754,9 +759,9 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
           <ul class="icon-list">
             <li><svg class="ico"><use href="#i-tag"/></svg>Criação de ofertas e cupons</li>
             <li><svg class="ico"><use href="#i-chart"/></svg>Métricas de cupons resgatados</li>
-            <li><svg class="ico"><use href="#i-star"/></svg>Avaliações de clientes</li>
-            <li><svg class="ico"><use href="#i-megaphone"/></svg>Campanhas por segmento de torcida</li>
-            <li><svg class="ico"><use href="#i-money"/></svg>Relatório de retorno do investimento</li>
+            <li><svg class="ico"><use href="#i-star"/></svg>Anúncios favoritados</li>
+            <li><svg class="ico"><use href="#i-megaphone"/></svg>Visão e controle das ofertas publicadas</li>
+            <li><svg class="ico"><use href="#i-qr"/></svg>Validação do Discontoken e dos Cupons</li>
           </ul>
           </div>
         </div>
@@ -790,9 +795,8 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
           <ul class="icon-list tight">
             <li><svg class="ico"><use href="#i-check"/></svg>Engajamento profundo da torcida</li>
             <li><svg class="ico"><use href="#i-check"/></svg>Novos dados de consumo</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Receita com pacotes de lojistas</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Parceiro estratégico do mercado local</li>
             <li><svg class="ico"><use href="#i-check"/></svg>Fortalecimento institucional</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Canal direto com a base</li>
           </ul>
         </div>
 
@@ -803,10 +807,9 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
           </div>
           <ul class="icon-list tight">
             <li><svg class="ico"><use href="#i-check"/></svg>Cupons com economia real</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Benefícios por GPS próximo</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Participação em afiliados</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Benefícios locais</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Renda extra como afiliado</li>
             <li><svg class="ico"><use href="#i-check"/></svg>Carteira de vantagens digital</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Experiência premiada</li>
           </ul>
         </div>
 
@@ -820,7 +823,6 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
             <li><svg class="ico"><use href="#i-check"/></svg>Visibilidade paga acessível</li>
             <li><svg class="ico"><use href="#i-check"/></svg>Métricas de resultado real</li>
             <li><svg class="ico"><use href="#i-check"/></svg>Campanhas segmentadas</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Aumento de vendas locais</li>
           </ul>
         </div>
 
@@ -833,8 +835,7 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
             <li><svg class="ico"><use href="#i-check"/></svg>Plataforma SaaS escalável</li>
             <li><svg class="ico"><use href="#i-check"/></svg>Receita de pacotes de anunciantes</li>
             <li><svg class="ico"><use href="#i-check"/></svg>Dados de consumo local</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Expansão da rede de afiliados</li>
-            <li><svg class="ico"><use href="#i-check"/></svg>Consolidação como líder</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Expansão da rede de usuários</li>
           </ul>
         </div>
       </div>
@@ -888,14 +889,10 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
         <div class="split-col accent animate delay-2">
           <div class="card-top">
             <div class="icon-badge ghost"><svg class="ico"><use href="#i-trending"/></svg></div>
-            <div><div class="card-sub">Exclusão</div><h3>Receita Paysandu</h3></div>
+            <div><div class="card-sub">Exclusão</div><h3>Fora da parceria</h3></div>
           </div>
           <ul class="icon-list tight">
-            <li><svg class="ico"><use href="#i-money"/></svg>Participação na compra de pacotes pelos lojistas</li>
-            <li><svg class="ico"><use href="#i-users"/></svg>Receita de novos anunciantes via afiliados</li>
-            <li><svg class="ico"><use href="#i-trending"/></svg>Comissão progressiva conforme a rede cresce</li>
-            <li><svg class="ico"><use href="#i-database"/></svg>Dados de consumo exclusivos da base Payxão</li>
-            <li><svg class="ico"><use href="#i-medal"/></svg>Posicionamento premium como clube inovador</li>
+            <li><svg class="ico"><use href="#i-money"/></svg>A participação ou comissões sobre receitas obtidas das vendas do app</li>
           </ul>
         </div>
       </div>
@@ -991,7 +988,7 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
             <div class="icon-badge ghost"><svg class="ico"><use href="#i-flag"/></svg></div>
           </div>
           <h3>Lançamento piloto</h3>
-          <p>Campanha piloto de captação de lojistas locais com oferta inaugural.</p>
+          <p>Campanha piloto com os primeiros lojistas parceiros e sócios selecionados.</p>
         </div>
       </div>
 
@@ -1005,7 +1002,7 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
               <div class="qr-img qr-usuario" role="img" aria-label="QR Code do vídeo de cadastro de usuário cupom"></div>
               <div class="qr-meta">
                 <span class="tag">Vídeo 01</span>
-                <span class="name">Cadastro de<br>Usuário Cupom</span>
+                <span class="name">Navegando Perfil<br>Usuário Cupom</span>
                 <span class="hint">Fluxo do torcedor</span>
               </div>
             </div>
@@ -1013,7 +1010,7 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
               <div class="qr-img qr-anunciante" role="img" aria-label="QR Code do vídeo de cadastro de anunciante"></div>
               <div class="qr-meta">
                 <span class="tag">Vídeo 02</span>
-                <span class="name">Cadastro de<br>Anunciante</span>
+                <span class="name">Navegando Perfil<br>Anunciante</span>
                 <span class="hint">Fluxo do lojista</span>
               </div>
             </div>
@@ -1037,10 +1034,7 @@ p,li{font-size:var(--fs-body);line-height:1.45;color:var(--gray-600)}
               <span class="label"><svg class="ico"><use href="#i-globe"/></svg>Site</span>
               <span class="value">discontapp.com.br</span>
             </div>
-            <div class="contact-item">
-              <span class="label"><svg class="ico"><use href="#i-smartphone"/></svg>App</span>
-              <span class="value">payxaodevantagens.com.br</span>
-            </div>
+
           </div>
         </div>
       </div>
